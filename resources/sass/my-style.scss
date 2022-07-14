@@ -1,0 +1,145 @@
+/*  Untuk mengatur lebar tabel di halaman pencarian  */
+.w-auto td,
+.w-auto th {
+    white-space: nowrap;
+    padding-left: 25px;
+    padding-right: 0px;
+}
+.w-auto td:last-child {
+    padding-right: 25px;
+}
+
+/*  Membuat efek ketika di target (menandai hasil edit)  */
+.card:target{
+    box-shadow: 0px 0px 6px;
+}
+tr:target{
+    background-color: lightyellow !important;
+}
+
+
+/*  Style untuk navbar  */
+#main-navbar .nav-link{
+    color: #212529;
+    text-transform:uppercase;
+}
+#main-navbar .nav-link:hover {
+    color: #9e7b1c;
+}
+#main-navbar .container {
+    border-bottom: 2px solid black;
+}
+.main-logo {
+    height: 70px;
+}
+.small-logo {
+    height: 60px;   /* Untuk logo kecil di footer */
+}
+
+
+/*  Untuk membuat button hover di halaman jurusan (card)  */
+.card .btn-action {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.card .btn-action {
+    opacity: 0;
+}
+.card:hover .btn-action {
+    opacity: 0.7;
+}
+.card .btn-action:hover {
+    opacity: 1.0 !important;
+}
+.card .btn-hapus {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-left: -1px;
+}
+
+/*  Media query agar tombol selalu tampil di layar kecil  */
+@media (max-width: 700px) {
+  .btn-action {
+      opacity: 0.7;
+  }
+}
+@media (hover: none) {
+  .btn-action {
+      opacity: 0.7;
+  }
+}
+
+/*  Mengubah warna button bawaan Bootstrap  */
+.btn-info, .btn-primary, .btn-secondary,
+.btn-info:focus, .btn-primary:focus, .btn-secondary:focus {
+    background-color: #1f3f7a;
+    border-color: #1f3f7a;
+    color:white;
+}
+.btn-info:hover, .btn-primary:hover, .btn-secondary:hover {
+    background-color: #0a2351;
+    border-color: #0a2351;
+    color:white;
+}
+.btn-info:focus, .btn-primary:focus, .btn-secondary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(31, 63, 122, 0.5) !important;
+}
+.btn-info:active,.btn-primary:active, .btn-info:active {
+    background-color: #0a2351 !important;
+}
+.btn-success {
+    background-color: #b99737;
+    border-color: #b99737;
+}
+.btn-success:hover {
+    background-color: #9e7b1c;
+    border-color: #9e7b1c;
+}
+.btn-success:focus {
+    box-shadow: 0 0 0 0.2rem rgba(185, 151, 55, 0.5) !important;
+}
+.btn-success:active {
+    background-color: #b99737 !important;
+}
+
+/*  Menukar warna ketika di select  */
+::selection {
+    background: #0a2351;
+    color: white;
+}
+
+/*  Menghapus underscore untuk link di tabel */
+table td a{
+    text-decoration: none;
+}
+
+/*  Memperbesar padding sel tabel */
+.table td, .table th {
+  padding: 0.75rem;
+}
+
+/*  Style untuk footer  */
+#main-footer {
+    background-color: #172c53 !important;
+}
+#main-footer ::selection {
+    background: white;
+    color: #0a2351;
+}
+
+#main-footer a {
+  text-decoration: none;
+}
+
+#main-footer a:hover {
+  text-decoration: underline;
+}
+
+/*-- Nonaktifkan XXL Breakpoint (opsional) --*/
+
+@media (min-width: 1200px) {
+  .container {
+      max-width: 1140px;
+  }
+}
