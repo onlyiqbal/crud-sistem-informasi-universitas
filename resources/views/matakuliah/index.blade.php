@@ -5,7 +5,9 @@
      </h1>
 
      <div class="text-end pt-5 pb-4">
-          <a href="{{ route('matakuliahs.create') }}" class="btn btn-info">Tambah Matakuliah</a>
+          @auth
+               <a href="{{ route('matakuliahs.create') }}" class="btn btn-info">Tambah Matakuliah</a>
+          @endauth
      </div>
 
      <table class="table table-striped">
