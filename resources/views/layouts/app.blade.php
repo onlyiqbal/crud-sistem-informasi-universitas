@@ -60,11 +60,6 @@
                         </li>
                     @else
                         <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle px-4"
-                            href="#" role="button" data-toggle="dropdown" v-pre>
-                            {{ Auth::user()->name }} <span class="caret"></span>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-end">
                                 <a class="dropdown-item px-4" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">
@@ -72,7 +67,6 @@
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;"> 
                                     @csrf
                                 </form>
-                            </div>
                         </li>
                     @endguest
                 </ul>
