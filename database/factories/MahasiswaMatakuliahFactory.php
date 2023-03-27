@@ -18,9 +18,9 @@ class MahasiswaMatakuliahFactory extends Factory
      */
     public function definition()
     {
-        $mahasiswa_id = $this->faker->numberBetween(1,Mahasiswa::count());
+        $mahasiswa_id = $this->faker->numberBetween(1, Mahasiswa::count());
         $jurusan_mahasiswa_id = Mahasiswa::find($mahasiswa_id)->jurusan_id;
-        $array_matakuliah = Matakuliah::where('jurusan_id',$jurusan_mahasiswa_id)->get('id');
+        $array_matakuliah = Matakuliah::where('jurusan_id', $jurusan_mahasiswa_id)->get('id');
 
         return [
             'mahasiswa_id' => $mahasiswa_id,

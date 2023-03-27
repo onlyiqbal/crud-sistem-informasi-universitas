@@ -20,8 +20,8 @@ class DosenFactory extends Factory
         $daftar_title = ["M.Kom", "M.Sc", "M.T", "M.Si"];
         return [
             'nid' => $this->faker->unique()->numerify('99######'),
-            'nama' => $this->faker->firstName()." ".$this->faker->lastName()." ".$this->faker->randomElement($daftar_title),
-            'jurusan_id' => $this->faker->numberBetween(1,Jurusan::count())
+            'nama' => $this->faker->firstName() . " " . $this->faker->lastName() . " " . $this->faker->randomElement($daftar_title),
+            'jurusan_id' => $this->faker->numberBetween(1, Jurusan::count())
         ];
     }
 }

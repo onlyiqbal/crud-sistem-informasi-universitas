@@ -19,8 +19,8 @@ class MahasiswaFactory extends Factory
     {
         return [
             'nim' => $this->faker->unique()->numerify('10######'),
-            'nama' => $this->faker->firstName()." ".$this->faker->lastName(),
-            'jurusan_id' => $this->faker->numberBetween(1,Jurusan::count())
+            'nama' => $this->faker->firstName() . " " . $this->faker->lastName(),
+            'jurusan_id' => $this->faker->numberBetween(1, Jurusan::count())
         ];
     }
 }
