@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,6 +23,7 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
+
 <body>
     <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-white py-3">
         <div class="container pb-3">
@@ -37,19 +39,19 @@
                 <ul class="navbar-nav m-auto">
                     <li class="nav-item">
                         <a href="{{ route('jurusans.index') }}" class="nav-link px-4">Jurusan</a>
-                    </li> 
+                    </li>
                     <li class="nav-item">
                         <a href="{{ route('dosens.index') }}" class="nav-link px-4">Dosen</a>
-                    </li> 
+                    </li>
                     <li class="nav-item">
                         <a href="{{ route('mahasiswas.index') }}" class="nav-link px-4">Mahasiswa</a>
-                    </li> 
+                    </li>
                     <li class="nav-item">
                         <a href="{{ route('matakuliahs.index') }}" class="nav-link px-4">Matakuliah</a>
-                    </li> 
+                    </li>
                     <li class="nav-item">
                         <a href="{{ url('/pencarian') }}" class="nav-link px-4">Search</a>
-                    </li> 
+                    </li>
                 </ul>
 
                 <ul class="navbar-nav ms-auto">
@@ -60,13 +62,13 @@
                         </li>
                     @else
                         <li class="nav-item dropdown">
-                                <a class="dropdown-item px-4" href="{{ route('logout') }}"
+                            <a class="dropdown-item px-4" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}</a>
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;"> 
-                                    @csrf
-                                </form>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
                         </li>
                     @endguest
                 </ul>
@@ -87,9 +89,13 @@
             <div class="row">
                 <div class="col-md-3 text-center text-md-start">
                     <a href="{{ url('/') }}">
-                        <img src="{{ asset('img/mikar_logo_black.png') }}" style="max-height: 60px;" class="mb-3 img-fluid">
+                        <img src="{{ asset('img/mikar_logo_black.png') }}" style="max-height: 60px;"
+                            class="mb-3 img-fluid">
                     </a>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt voluptate nesciunt labore, voluptatem laudantium illo doloribus iure fugit dolores vero architecto aperiam sunt ab non nam quam autem, odio voluptas.</p>
+                    <p>Universitas Mitra Karya merupakan sebuah kampus yang terletak di Bekasi dan menawarkan berbagai
+                        program studi yang berkualitas tinggi, seperti Teknik Informatika, Akuntansi, Hukum, dan Bisnis.
+                        Kampus ini memiliki fokus pada pembangunan karakter dan keterampilan praktis bagi mahasiswa,
+                        dengan menggabungkan teori dan praktek dalam pembelajaran.</p>
                 </div>
                 <div class="col-md-3 text-center">
                     <h5>Information</h5>
@@ -115,7 +121,7 @@
                             @if (Route::has('register'))
                                 <li>
                                     <a class="text-white" href="{{ route('register') }}">
-                                    {{ __('Register') }}
+                                        {{ __('Register') }}
                                     </a>
                                 </li>
                             @endif
@@ -160,4 +166,5 @@
     </footer>
     @include('sweetalert::alert')
 </body>
+
 </html>
