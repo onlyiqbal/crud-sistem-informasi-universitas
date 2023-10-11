@@ -60,6 +60,10 @@
                             <a class="nav-link px-4" href="{{ route('login') }}">
                                 {{ __('Login') }}</a>
                         </li>
+                        <li id="nav-item">
+                            <a class="nav-link px-4" href="{{ route('register') }}">
+                                {{ __('Register') }}</a>
+                        </li>
                     @else
                         <li class="nav-item dropdown">
                             <a class="dropdown-item px-4" href="{{ route('logout') }}"
